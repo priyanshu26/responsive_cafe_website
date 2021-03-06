@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Balsamiq Sans', cursive;
+}
+header::before{
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg-2.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+.logo{
+    height: 10vh;
+    width: auto;
+    position: relative;
+    top: 3vh;
+    left: 3vw;
+}
+.main-nav{
+    position: absolute;
+    top: 6vh;
+    right: 4vw;
+    display: flex;
+    /* float: left; */
+    /* display: inline-block; */
+}
+
+.main-nav li{
+    list-style: none;
+    padding: 1vh 2vw;
+    text-transform: uppercase;
+    font-size: 110%;
+}
+.main-nav li a{
+    padding: 3px 0;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid lightblue;
+}
+
+.main-content-head{
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    color: lightblue;
+    font-size: 265%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: lighter;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+.btn-full{
+    background-color: transparent;
+    color: #81bdd3;
+    margin-right: 20px;
+    border: 2px solid #81bdd3;
+}
+
+.btn-full:hover{
+    background-color: whitesmoke;
+    border: none;
+}
+
+.btn-half{
+    background-color: transparent;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+}
+
+.btn-half:hover{
+    background-color: #81bdd3;
+    border: none;
+}
+
+.colorChange{
+    animation: colorChangeHotCafe 1s infinite;
+}
+.icon{
+    position: absolute;
+    display: none;
+}
+
+@keyframes colorChangeHotCafe{
+    0%{color: whitesmoke;}
+    25%{color: #81bdd3;}
+    50%{color: rgb(255, 240, 240);}
+    75%{color: #bdbebe;}
+    100%{color: #dadbd4;}
+}
+
+/* /////////Responsive Quaries///////// */
+
+@media only screen and (max-width: 780px){
+    h1{
+        font-size: 190%;
+    }
+    #check-class{
+        display: none;
+    }
+    .btn{
+        margin-bottom: 5px;
+    }
+    /* .main-nav{display: none;} */
+    .icon{
+        display: inline-block;
+        color: whitesmoke;
+        top: 6vh;
+        right: 10vw;
+    }
+    .main-nav{position: absolute;
+        left: 30vw;
+    }
+    .main-nav li{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h1{
+        font-size: 130%;
+    }
+}
